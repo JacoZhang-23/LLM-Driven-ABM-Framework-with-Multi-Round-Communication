@@ -7,7 +7,7 @@ multi-round dialogues, and update beliefs through a post-dialogue reflection ste
 designed to study how conversational content aggregates into macro-level outcomes such as mean
 opinion, polarization, and vaccination uptake, and to compare baseline vs memory-augmented agents.
 
-## Framework Summary
+## Framework Summary (Paper-Aligned)
 - Network: three relation layers (household hh, workplace wk, social media sm) with different
       profile visibility rules.
 - Personas: age, occupation, education, income, and urban/rural attributes are injected into prompts.
@@ -18,7 +18,7 @@ opinion, polarization, and vaccination uptake, and to compare baseline vs memory
       a key argument, which are injected into future prompts.
 
 ## Inputs
-Required data files in data/input/:
+Required data files in the repo root data/input/:
 - workplace_36013030400w1_extended_population.csv
 - workplace_36013030400w1_extended_network.csv
 
@@ -44,7 +44,9 @@ Each conversation uses 4 rounds followed by a reflection step:
 - Combined: memory + prompt diversity.
 
 ## Run
+Run from the repo root so paths resolve to data/input:
 ```bash
+cd src_v2
 pip install -r requirements.txt
 python main.py
 ```
@@ -61,6 +63,10 @@ If you do not need charts, you can skip or remove those scripts and their calls 
 
 ## Project Structure
 ```
+data/
+└── input/
+    ├── workplace_36013030400w1_extended_network.csv
+    └── workplace_36013030400w1_extended_population.csv
 src_v2/
 ├── main.py
 ├── model.py
@@ -69,9 +75,7 @@ src_v2/
 ├── config.py
 ├── analysis.py
 ├── visualize_batch_results.py
-├── requirements.txt
-└── data/
-      └── input/
+└── requirements.txt
 ```
 
 ## Requirements
