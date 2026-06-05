@@ -7,7 +7,7 @@ multi-round dialogues, and update beliefs through a post-dialogue reflection ste
 designed to study how conversational content aggregates into macro-level outcomes such as mean
 opinion, polarization, and vaccination uptake, and to compare baseline vs memory-augmented agents.
 
-## Framework Summary (Paper-Aligned)
+## Framework Summary
 - Network: three relation layers (household hh, workplace wk, social media sm) with different
       profile visibility rules.
 - Personas: age, occupation, education, income, and urban/rural attributes are injected into prompts.
@@ -53,9 +53,18 @@ python main.py
 
 ## Outputs
 Output directory: data/output/simulation_<timestamp>/
-- model_data.csv, agent_data.csv, agent_profiles.json
-- all_dialogues.json, network_data.json
-- most_impactful_dialogues_report.txt
+- model_data_mean.csv, model_data_std.csv (scenario-level aggregates)
+- run_XX/ per run outputs:
+      - model_data.csv, agent_data.csv, agent_profiles.json
+      - all_dialogues.json, network_data.json, scenario_metadata.json
+      - most_impactful_dialogues_report.txt
+- visualizations/ (figures and charts):
+      - average opinion trajectory, polarization, and vaccination rate curves
+      - influence scatter plots (belief disparity vs belief change)
+      - belief distribution comparisons (LLM vs VADER, step 0 vs step 10)
+      - network evolution snapshots by step
+      - dialogue card visuals for representative exchanges
+- comparison/ (cross-scenario summaries and comparison figures when running multiple scenarios)
 
 ## Optional Visualization
 Visualization scripts are in visualize_batch_results.py and analysis.py.
