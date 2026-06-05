@@ -7,7 +7,7 @@ multi-round dialogues, and update beliefs through a post-dialogue reflection ste
 designed to study how conversational content aggregates into macro-level outcomes such as mean
 opinion, polarization, and vaccination uptake, and to compare baseline vs memory-augmented agents.
 
-## Framework Summary (Paper-Aligned)
+## Framework Summary
 - Network: three relation layers (household hh, workplace wk, social media sm) with different
       profile visibility rules.
 - Personas: age, occupation, education, income, and urban/rural attributes are injected into prompts.
