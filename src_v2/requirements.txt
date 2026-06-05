@@ -1,0 +1,45 @@
+# Core dependencies for LLM-based Multi-round Dialogue Vaccination Simulation
+
+# Mesa Agent-Based Modeling Framework
+mesa
+
+# Network analysis and generation
+networkx
+
+# Numerical computing
+numpy
+pandas
+
+# Machine Learning and NLP
+torch
+transformers
+nltk
+
+# HTTP requests and async I/O
+aiohttp
+requests
+
+# Data serialization
+json
+pickle
+
+# Sentiment analysis
+vaderSentiment
+
+# Async utilities
+asyncio
+
+# OpenAI API client (for DeepSeek compatibility)
+openai
+
+# Visualization libraries
+matplotlib
+seaborn
+
+# Additional utilities
+python-dateutil
+tqdm
+
+# Optional: For better performance
+# scikit-learn>=1.0.0
+# pillow>=8.0.0  # For GIF animations
